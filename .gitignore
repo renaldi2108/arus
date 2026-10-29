@@ -1,0 +1,31 @@
+# Gradle
+.gradle/
+build/
+!build-logic/
+!gradle/wrapper/gradle-wrapper.jar
+local.properties
+
+# Project bookkeeping
+# ADRs, progress reports, audits and the backlog are maintainer notes, not
+# part of what a consumer gets. README.md carries the usage documentation and
+# links nowhere into here, so ignoring this directory breaks no reference.
+docs/
+ide/
+
+# Kotlin / Native
+.kotlin/
+kotlin-js-store/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.fleet/
+
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcworkspace/xcuserdata/

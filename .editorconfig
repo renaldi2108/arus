@@ -1,0 +1,10 @@
+root = true
+
+[*.{kt,kts}]
+# Must match detekt's MaxLineLength (120). Without it ktlint assumes no limit
+# and demands that expression bodies be joined onto signature lines that detekt
+# then rejects as too long — the two tools pull in opposite directions.
+max_line_length = 120
+# @Composable functions are PascalCase by Compose convention; ktlint's default
+# camelCase rule would reject every composable in the library.
+ktlint_function_naming_ignore_when_annotated_with = Composable
