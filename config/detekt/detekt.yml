@@ -1,0 +1,43 @@
+# Arus detekt configuration.
+#
+# Builds upon detekt's default rule set (`buildUponDefaultConfig = true`); only
+# deviations are listed here. Every public declaration must carry KDoc; the
+# `comments` rules below are what enforce it.
+
+build:
+  maxIssues: 0
+
+comments:
+  active: true
+  UndocumentedPublicClass:
+    active: true
+    searchInNestedClass: true
+    searchInInnerClass: true
+    searchInInnerObject: true
+    searchInInnerInterface: true
+  UndocumentedPublicFunction:
+    active: true
+  UndocumentedPublicProperty:
+    active: true
+
+complexity:
+  LongParameterList:
+    # Controllers legitimately take several injected collaborators.
+    functionThreshold: 8
+    constructorThreshold: 8
+
+style:
+  MagicNumber:
+    # Defaults such as the 64-effect buffer cap read better inline.
+    ignorePropertyDeclaration: true
+    ignoreCompanionObjectPropertyDeclaration: true
+  ForbiddenComment:
+    # A TODO is only allowed when it links to an entry in `docs/BACKLOG.md`.
+    # Checking that the link is real is a review step, not something detekt
+    # can decide, so it does not fail the build on them.
+    active: false
+
+naming:
+  FunctionNaming:
+    # @Composable functions are PascalCase by convention.
+    ignoreAnnotated: ['Composable']
