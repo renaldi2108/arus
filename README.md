@@ -24,6 +24,7 @@ Hilt, or by hand.
   [transitions](#per-route-transitions), [bottom sheets](#bottom-sheets),
   [bottom navigation](#bottom-navigation)
 - [Testing](#testing)
+- [License](#license)
 
 ---
 
@@ -501,3 +502,11 @@ fun theBackStackSurvivesProcessDeath() = runComposeUiTest {
 Genuine save and restore: routes go through the same serialization the platform
 uses, so a destination with an argument the platform cannot write fails here
 exactly as it would on a phone.
+
+---
+
+## License
+
+Apache License 2.0 — see [LICENSE](LICENSE). The published POM declares the
+same license, so a dependency scanner reads it straight from Maven Central
+without visiting this page.
