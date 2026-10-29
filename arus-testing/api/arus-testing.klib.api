@@ -1,0 +1,181 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.renaldi2108:arus-testing>
+sealed interface io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation|null[0]
+    final class PopTo : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.PopTo|null[0]
+        constructor <init>(io.github.renaldi2108.arus.nav/Route, kotlin/Boolean) // io.github.renaldi2108.arus.testing/NavOperation.PopTo.<init>|<init>(io.github.renaldi2108.arus.nav.Route;kotlin.Boolean){}[0]
+
+        final val inclusive // io.github.renaldi2108.arus.testing/NavOperation.PopTo.inclusive|{}inclusive[0]
+            final fun <get-inclusive>(): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.PopTo.inclusive.<get-inclusive>|<get-inclusive>(){}[0]
+        final val route // io.github.renaldi2108.arus.testing/NavOperation.PopTo.route|{}route[0]
+            final fun <get-route>(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.PopTo.route.<get-route>|<get-route>(){}[0]
+
+        final fun component1(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.PopTo.component1|component1(){}[0]
+        final fun component2(): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.PopTo.component2|component2(){}[0]
+        final fun copy(io.github.renaldi2108.arus.nav/Route = ..., kotlin/Boolean = ...): io.github.renaldi2108.arus.testing/NavOperation.PopTo // io.github.renaldi2108.arus.testing/NavOperation.PopTo.copy|copy(io.github.renaldi2108.arus.nav.Route;kotlin.Boolean){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.PopTo.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.PopTo.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.PopTo.toString|toString(){}[0]
+    }
+
+    final class PopWithResult : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult|null[0]
+        constructor <init>(kotlin/Any) // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.<init>|<init>(kotlin.Any){}[0]
+
+        final val result // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.result|{}result[0]
+            final fun <get-result>(): kotlin/Any // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.result.<get-result>|<get-result>(){}[0]
+
+        final fun component1(): kotlin/Any // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.component1|component1(){}[0]
+        final fun copy(kotlin/Any = ...): io.github.renaldi2108.arus.testing/NavOperation.PopWithResult // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.copy|copy(kotlin.Any){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.PopWithResult.toString|toString(){}[0]
+    }
+
+    final class Publish : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.Publish|null[0]
+        constructor <init>(kotlin/Any) // io.github.renaldi2108.arus.testing/NavOperation.Publish.<init>|<init>(kotlin.Any){}[0]
+
+        final val message // io.github.renaldi2108.arus.testing/NavOperation.Publish.message|{}message[0]
+            final fun <get-message>(): kotlin/Any // io.github.renaldi2108.arus.testing/NavOperation.Publish.message.<get-message>|<get-message>(){}[0]
+
+        final fun component1(): kotlin/Any // io.github.renaldi2108.arus.testing/NavOperation.Publish.component1|component1(){}[0]
+        final fun copy(kotlin/Any = ...): io.github.renaldi2108.arus.testing/NavOperation.Publish // io.github.renaldi2108.arus.testing/NavOperation.Publish.copy|copy(kotlin.Any){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.Publish.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.Publish.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.Publish.toString|toString(){}[0]
+    }
+
+    final class Push : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.Push|null[0]
+        constructor <init>(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/NavOperation.Push.<init>|<init>(io.github.renaldi2108.arus.nav.Route){}[0]
+
+        final val route // io.github.renaldi2108.arus.testing/NavOperation.Push.route|{}route[0]
+            final fun <get-route>(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.Push.route.<get-route>|<get-route>(){}[0]
+
+        final fun component1(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.Push.component1|component1(){}[0]
+        final fun copy(io.github.renaldi2108.arus.nav/Route = ...): io.github.renaldi2108.arus.testing/NavOperation.Push // io.github.renaldi2108.arus.testing/NavOperation.Push.copy|copy(io.github.renaldi2108.arus.nav.Route){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.Push.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.Push.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.Push.toString|toString(){}[0]
+    }
+
+    final class PushForResult : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.PushForResult|null[0]
+        constructor <init>(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.<init>|<init>(io.github.renaldi2108.arus.nav.Route){}[0]
+
+        final val route // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.route|{}route[0]
+            final fun <get-route>(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.route.<get-route>|<get-route>(){}[0]
+
+        final fun component1(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.component1|component1(){}[0]
+        final fun copy(io.github.renaldi2108.arus.nav/Route = ...): io.github.renaldi2108.arus.testing/NavOperation.PushForResult // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.copy|copy(io.github.renaldi2108.arus.nav.Route){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.PushForResult.toString|toString(){}[0]
+    }
+
+    final class Replace : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.Replace|null[0]
+        constructor <init>(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/NavOperation.Replace.<init>|<init>(io.github.renaldi2108.arus.nav.Route){}[0]
+
+        final val route // io.github.renaldi2108.arus.testing/NavOperation.Replace.route|{}route[0]
+            final fun <get-route>(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.Replace.route.<get-route>|<get-route>(){}[0]
+
+        final fun component1(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.Replace.component1|component1(){}[0]
+        final fun copy(io.github.renaldi2108.arus.nav/Route = ...): io.github.renaldi2108.arus.testing/NavOperation.Replace // io.github.renaldi2108.arus.testing/NavOperation.Replace.copy|copy(io.github.renaldi2108.arus.nav.Route){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.Replace.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.Replace.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.Replace.toString|toString(){}[0]
+    }
+
+    final class ResetTo : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.ResetTo|null[0]
+        constructor <init>(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.<init>|<init>(io.github.renaldi2108.arus.nav.Route){}[0]
+
+        final val route // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.route|{}route[0]
+            final fun <get-route>(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.route.<get-route>|<get-route>(){}[0]
+
+        final fun component1(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.component1|component1(){}[0]
+        final fun copy(io.github.renaldi2108.arus.nav/Route = ...): io.github.renaldi2108.arus.testing/NavOperation.ResetTo // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.copy|copy(io.github.renaldi2108.arus.nav.Route){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.ResetTo.toString|toString(){}[0]
+    }
+
+    final object Pop : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.Pop|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.Pop.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.Pop.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.Pop.toString|toString(){}[0]
+    }
+
+    final object PopToRoot : io.github.renaldi2108.arus.testing/NavOperation { // io.github.renaldi2108.arus.testing/NavOperation.PopToRoot|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.testing/NavOperation.PopToRoot.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.testing/NavOperation.PopToRoot.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.testing/NavOperation.PopToRoot.toString|toString(){}[0]
+    }
+}
+
+final class io.github.renaldi2108.arus.testing/ArusHostUnderTest { // io.github.renaldi2108.arus.testing/ArusHostUnderTest|null[0]
+    final val navigator // io.github.renaldi2108.arus.testing/ArusHostUnderTest.navigator|{}navigator[0]
+        final fun <get-navigator>(): io.github.renaldi2108.arus.nav/Navigator // io.github.renaldi2108.arus.testing/ArusHostUnderTest.navigator.<get-navigator>|<get-navigator>(){}[0]
+
+    final fun simulateProcessDeath() // io.github.renaldi2108.arus.testing/ArusHostUnderTest.simulateProcessDeath|simulateProcessDeath(){}[0]
+}
+
+final class io.github.renaldi2108.arus.testing/FakeNavigator : io.github.renaldi2108.arus.nav/Navigator { // io.github.renaldi2108.arus.testing/FakeNavigator|null[0]
+    constructor <init>(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/FakeNavigator.<init>|<init>(io.github.renaldi2108.arus.nav.Route){}[0]
+
+    final val backStack // io.github.renaldi2108.arus.testing/FakeNavigator.backStack|{}backStack[0]
+        final fun <get-backStack>(): kotlin.collections/List<io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.testing/FakeNavigator.backStack.<get-backStack>|<get-backStack>(){}[0]
+    final val canPop // io.github.renaldi2108.arus.testing/FakeNavigator.canPop|{}canPop[0]
+        final fun <get-canPop>(): kotlinx.coroutines.flow/StateFlow<kotlin/Boolean> // io.github.renaldi2108.arus.testing/FakeNavigator.canPop.<get-canPop>|<get-canPop>(){}[0]
+    final val currentRoute // io.github.renaldi2108.arus.testing/FakeNavigator.currentRoute|{}currentRoute[0]
+        final fun <get-currentRoute>(): kotlinx.coroutines.flow/StateFlow<io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.testing/FakeNavigator.currentRoute.<get-currentRoute>|<get-currentRoute>(){}[0]
+    final val operations // io.github.renaldi2108.arus.testing/FakeNavigator.operations|{}operations[0]
+        final fun <get-operations>(): kotlin.collections/MutableList<io.github.renaldi2108.arus.testing/NavOperation> // io.github.renaldi2108.arus.testing/FakeNavigator.operations.<get-operations>|<get-operations>(){}[0]
+    final val published // io.github.renaldi2108.arus.testing/FakeNavigator.published|{}published[0]
+        final fun <get-published>(): kotlin.collections/MutableList<kotlin/Any> // io.github.renaldi2108.arus.testing/FakeNavigator.published.<get-published>|<get-published>(){}[0]
+
+    final var nextResult // io.github.renaldi2108.arus.testing/FakeNavigator.nextResult|{}nextResult[0]
+        final fun <get-nextResult>(): kotlin/Any? // io.github.renaldi2108.arus.testing/FakeNavigator.nextResult.<get-nextResult>|<get-nextResult>(){}[0]
+        final fun <set-nextResult>(kotlin/Any?) // io.github.renaldi2108.arus.testing/FakeNavigator.nextResult.<set-nextResult>|<set-nextResult>(kotlin.Any?){}[0]
+
+    final fun <#A1: kotlin/Any> messages(kotlin.reflect/KClass<#A1>): kotlinx.coroutines.flow/Flow<#A1> // io.github.renaldi2108.arus.testing/FakeNavigator.messages|messages(kotlin.reflect.KClass<0:0>){0§<kotlin.Any>}[0]
+    final fun <#A1: kotlin/Any> popWithResult(#A1) // io.github.renaldi2108.arus.testing/FakeNavigator.popWithResult|popWithResult(0:0){0§<kotlin.Any>}[0]
+    final fun pop(): kotlin/Boolean // io.github.renaldi2108.arus.testing/FakeNavigator.pop|pop(){}[0]
+    final fun popTo(io.github.renaldi2108.arus.nav/Route, kotlin/Boolean): kotlin/Boolean // io.github.renaldi2108.arus.testing/FakeNavigator.popTo|popTo(io.github.renaldi2108.arus.nav.Route;kotlin.Boolean){}[0]
+    final fun popToRoot() // io.github.renaldi2108.arus.testing/FakeNavigator.popToRoot|popToRoot(){}[0]
+    final fun publish(kotlin/Any) // io.github.renaldi2108.arus.testing/FakeNavigator.publish|publish(kotlin.Any){}[0]
+    final fun push(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/FakeNavigator.push|push(io.github.renaldi2108.arus.nav.Route){}[0]
+    final fun replace(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/FakeNavigator.replace|replace(io.github.renaldi2108.arus.nav.Route){}[0]
+    final fun resetTo(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.testing/FakeNavigator.resetTo|resetTo(io.github.renaldi2108.arus.nav.Route){}[0]
+    final suspend fun <#A1: kotlin/Any> pushForResult(io.github.renaldi2108.arus.nav/ResultRoute<#A1>): io.github.renaldi2108.arus.nav/NavResult<#A1> // io.github.renaldi2108.arus.testing/FakeNavigator.pushForResult|pushForResult(io.github.renaldi2108.arus.nav.ResultRoute<0:0>){0§<kotlin.Any>}[0]
+}
+
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_ArusHostUnderTest$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_ArusHostUnderTest$stableprop|#static{}io_github_renaldi2108_arus_testing_ArusHostUnderTest$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_FakeNavigator$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_FakeNavigator$stableprop|#static{}io_github_renaldi2108_arus_testing_FakeNavigator$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Pop$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Pop$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_Pop$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopTo$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopTo$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_PopTo$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopToRoot$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopToRoot$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_PopToRoot$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopWithResult$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopWithResult$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_PopWithResult$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Publish$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Publish$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_Publish$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Push$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Push$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_Push$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PushForResult$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PushForResult$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_PushForResult$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Replace$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Replace$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_Replace$stableprop[0]
+final val io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_ResetTo$stableprop // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_ResetTo$stableprop|#static{}io_github_renaldi2108_arus_testing_NavOperation_ResetTo$stableprop[0]
+
+final fun (androidx.compose.ui.test/ComposeUiTest).io.github.renaldi2108.arus.testing/setArusContent(io.github.renaldi2108.arus.nav/Navigator, kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.testing/setArusContent|setArusContent@androidx.compose.ui.test.ComposeUiTest(io.github.renaldi2108.arus.nav.Navigator;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){}[0]
+final fun (androidx.compose.ui.test/ComposeUiTest).io.github.renaldi2108.arus.testing/setArusHost(io.github.renaldi2108.arus.nav/Route, kotlin/Function1<io.github.renaldi2108.arus.nav/ArusEntries, kotlin/Unit>): io.github.renaldi2108.arus.testing/ArusHostUnderTest // io.github.renaldi2108.arus.testing/setArusHost|setArusHost@androidx.compose.ui.test.ComposeUiTest(io.github.renaldi2108.arus.nav.Route;kotlin.Function1<io.github.renaldi2108.arus.nav.ArusEntries,kotlin.Unit>){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_ArusHostUnderTest$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_ArusHostUnderTest$stableprop_getter|io_github_renaldi2108_arus_testing_ArusHostUnderTest$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_FakeNavigator$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_FakeNavigator$stableprop_getter|io_github_renaldi2108_arus_testing_FakeNavigator$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Pop$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Pop$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_Pop$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopTo$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopTo$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_PopTo$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopToRoot$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopToRoot$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_PopToRoot$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopWithResult$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PopWithResult$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_PopWithResult$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Publish$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Publish$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_Publish$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Push$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Push$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_Push$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PushForResult$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_PushForResult$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_PushForResult$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Replace$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_Replace$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_Replace$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_ResetTo$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.testing/io_github_renaldi2108_arus_testing_NavOperation_ResetTo$stableprop_getter|io_github_renaldi2108_arus_testing_NavOperation_ResetTo$stableprop_getter(){}[0]
+final suspend fun <#A: io.github.renaldi2108.arus.core/UiEffect> (io.github.renaldi2108.arus.core/ArusController<*, #A>).io.github.renaldi2108.arus.testing/awaitEffects(kotlin/Int = ..., kotlin/Long = ..., kotlin/Function0<kotlin/Unit>): kotlin.collections/List<#A> // io.github.renaldi2108.arus.testing/awaitEffects|awaitEffects@io.github.renaldi2108.arus.core.ArusController<*,0:0>(kotlin.Int;kotlin.Long;kotlin.Function0<kotlin.Unit>){0§<io.github.renaldi2108.arus.core.UiEffect>}[0]
+final suspend fun <#A: kotlin/Any> (io.github.renaldi2108.arus.core/ArusController<#A, *>).io.github.renaldi2108.arus.testing/awaitState(kotlin/Long = ..., kotlin/Function1<#A, kotlin/Boolean>): #A // io.github.renaldi2108.arus.testing/awaitState|awaitState@io.github.renaldi2108.arus.core.ArusController<0:0,*>(kotlin.Long;kotlin.Function1<0:0,kotlin.Boolean>){0§<kotlin.Any>}[0]
+final suspend fun io.github.renaldi2108.arus.testing/runControllerTest(kotlin.coroutines/SuspendFunction0<kotlin/Unit>) // io.github.renaldi2108.arus.testing/runControllerTest|runControllerTest(kotlin.coroutines.SuspendFunction0<kotlin.Unit>){}[0]
