@@ -1,0 +1,102 @@
+[versions]
+# --- Toolchain -------------------------------------------------------------
+kotlin = "2.4.21"
+# Pinned to 9.3.1, not the newest 9.4.x: Android Studio refuses to sync a
+# project whose AGP is newer than the version the IDE ships support for
+# ("Latest supported version is AGP 9.3.1"). Raise this only together with the
+# IDE. See BACKLOG-13.
+agp = "9.3.1"
+composeMultiplatform = "1.12.2"
+composeMaterial3 = "1.9.0"
+androidxComposeUiTest = "1.10.1"
+androidxTestRunner = "1.7.0"
+androidxTestEspresso = "3.7.0"
+jvmTarget = "17"
+
+# --- Android SDK levels ----------------------------------------------------
+# minSdk 24 is Android 7.0. Not yet confirmed against a real device list; raising
+# it is a source-compatible change, lowering it is not.
+androidMinSdk = "24"
+androidCompileSdk = "37"
+androidTargetSdk = "37"
+
+# --- AndroidX (Google publishes these as true multiplatform artifacts) -----
+# Verified: lifecycle-* and navigation3-runtime 1.2.0 ship iosArm64 +
+# iosSimulatorArm64 variants directly from Google. See ADR-010.
+androidxLifecycle = "2.11.0"
+androidxNavigation3 = "1.2.0"
+
+# --- JetBrains mirror (ONLY where Google is Android-only) ------------------
+# `androidx.navigation3:navigation3-ui` is Android/JVM-only because it binds to
+# Jetpack Compose UI. The JetBrains build is the multiplatform NavDisplay layer.
+# On Android it is a 0-class pass-through AAR depending on the Google artifact,
+# so Android-only consumers get real AndroidX classes with no duplicate classes.
+jbNavigation3Ui = "1.2.0"
+
+# --- Libraries -------------------------------------------------------------
+coroutines = "1.11.0"
+serialization = "1.12.0"
+
+# --- Testing ---------------------------------------------------------------
+turbine = "1.2.1"
+
+# --- Static analysis / tooling ---------------------------------------------
+detekt = "1.23.8"
+ktlint = "14.2.0"
+binaryCompatibilityValidator = "0.18.2"
+kover = "0.9.11"
+mavenPublish = "0.37.0"
+
+[libraries]
+# --- Coroutines ------------------------------------------------------------
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+
+# --- Serialization ---------------------------------------------------------
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "serialization" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+
+# --- Lifecycle / ViewModel (multiplatform, from Google) --------------------
+androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "androidxLifecycle" }
+
+# --- Compose Multiplatform (explicit coordinates; the plugin's `compose.*`
+# accessors are deprecated in favour of declaring dependencies directly) -----
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMaterial3" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+compose-ui-test = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "composeMultiplatform" }
+compose-ui-test-junit4-android = { module = "androidx.compose.ui:ui-test-junit4-android", version.ref = "androidxComposeUiTest" }
+compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "androidxComposeUiTest" }
+androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidxTestEspresso" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
+
+# --- Navigation 3 ----------------------------------------------------------
+androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "androidxNavigation3" }
+jb-navigation3-ui = { module = "org.jetbrains.androidx.navigation3:navigation3-ui", version.ref = "jbNavigation3Ui" }
+
+# --- Testing ---------------------------------------------------------------
+turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+
+# --- Plugin artifacts exposed to build-logic -------------------------------
+plugin-kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-android-gradle = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+plugin-compose-gradle = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeMultiplatform" }
+plugin-kotlin-compose-gradle = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+plugin-maven-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "mavenPublish" }
+
+[plugins]
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+androidKmpLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
+binaryCompatibilityValidator = { id = "org.jetbrains.kotlinx.binary-compatibility-validator", version.ref = "binaryCompatibilityValidator" }
+kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
