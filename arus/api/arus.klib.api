@@ -1,0 +1,452 @@
+// Klib ABI Dump
+// Targets: [iosArm64, iosSimulatorArm64]
+// Rendering settings:
+// - Signature version: 2
+// - Show manifest properties: true
+// - Show declarations: true
+
+// Library unique name: <io.github.renaldi2108:arus>
+final enum class io.github.renaldi2108.arus.effects/SnackbarDuration : kotlin/Enum<io.github.renaldi2108.arus.effects/SnackbarDuration> { // io.github.renaldi2108.arus.effects/SnackbarDuration|null[0]
+    enum entry Indefinite // io.github.renaldi2108.arus.effects/SnackbarDuration.Indefinite|null[0]
+    enum entry Long // io.github.renaldi2108.arus.effects/SnackbarDuration.Long|null[0]
+    enum entry Short // io.github.renaldi2108.arus.effects/SnackbarDuration.Short|null[0]
+
+    final val entries // io.github.renaldi2108.arus.effects/SnackbarDuration.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.renaldi2108.arus.effects/SnackbarDuration> // io.github.renaldi2108.arus.effects/SnackbarDuration.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.renaldi2108.arus.effects/SnackbarDuration // io.github.renaldi2108.arus.effects/SnackbarDuration.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.renaldi2108.arus.effects/SnackbarDuration> // io.github.renaldi2108.arus.effects/SnackbarDuration.values|values#static(){}[0]
+}
+
+final enum class io.github.renaldi2108.arus.nav/NavAction : kotlin/Enum<io.github.renaldi2108.arus.nav/NavAction> { // io.github.renaldi2108.arus.nav/NavAction|null[0]
+    enum entry Pop // io.github.renaldi2108.arus.nav/NavAction.Pop|null[0]
+    enum entry PopTo // io.github.renaldi2108.arus.nav/NavAction.PopTo|null[0]
+    enum entry PopToRoot // io.github.renaldi2108.arus.nav/NavAction.PopToRoot|null[0]
+    enum entry Push // io.github.renaldi2108.arus.nav/NavAction.Push|null[0]
+    enum entry Replace // io.github.renaldi2108.arus.nav/NavAction.Replace|null[0]
+    enum entry ResetTo // io.github.renaldi2108.arus.nav/NavAction.ResetTo|null[0]
+
+    final val entries // io.github.renaldi2108.arus.nav/NavAction.entries|#static{}entries[0]
+        final fun <get-entries>(): kotlin.enums/EnumEntries<io.github.renaldi2108.arus.nav/NavAction> // io.github.renaldi2108.arus.nav/NavAction.entries.<get-entries>|<get-entries>#static(){}[0]
+
+    final fun valueOf(kotlin/String): io.github.renaldi2108.arus.nav/NavAction // io.github.renaldi2108.arus.nav/NavAction.valueOf|valueOf#static(kotlin.String){}[0]
+    final fun values(): kotlin/Array<io.github.renaldi2108.arus.nav/NavAction> // io.github.renaldi2108.arus.nav/NavAction.values|values#static(){}[0]
+}
+
+abstract fun interface io.github.renaldi2108.arus.nav/NavGuard { // io.github.renaldi2108.arus.nav/NavGuard|null[0]
+    abstract fun check(io.github.renaldi2108.arus.nav/Route, io.github.renaldi2108.arus.nav/Route): io.github.renaldi2108.arus.nav/GuardDecision // io.github.renaldi2108.arus.nav/NavGuard.check|check(io.github.renaldi2108.arus.nav.Route;io.github.renaldi2108.arus.nav.Route){}[0]
+}
+
+abstract interface <#A: out kotlin/Any> io.github.renaldi2108.arus.nav/ResultRoute : io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.nav/ResultRoute|null[0]
+
+abstract interface io.github.renaldi2108.arus.core/UiEffect // io.github.renaldi2108.arus.core/UiEffect|null[0]
+
+abstract interface io.github.renaldi2108.arus.nav/Navigator { // io.github.renaldi2108.arus.nav/Navigator|null[0]
+    abstract val canPop // io.github.renaldi2108.arus.nav/Navigator.canPop|{}canPop[0]
+        abstract fun <get-canPop>(): kotlinx.coroutines.flow/StateFlow<kotlin/Boolean> // io.github.renaldi2108.arus.nav/Navigator.canPop.<get-canPop>|<get-canPop>(){}[0]
+    abstract val currentRoute // io.github.renaldi2108.arus.nav/Navigator.currentRoute|{}currentRoute[0]
+        abstract fun <get-currentRoute>(): kotlinx.coroutines.flow/StateFlow<io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.nav/Navigator.currentRoute.<get-currentRoute>|<get-currentRoute>(){}[0]
+
+    abstract fun <#A1: kotlin/Any> messages(kotlin.reflect/KClass<#A1>): kotlinx.coroutines.flow/Flow<#A1> // io.github.renaldi2108.arus.nav/Navigator.messages|messages(kotlin.reflect.KClass<0:0>){0§<kotlin.Any>}[0]
+    abstract fun <#A1: kotlin/Any> popWithResult(#A1) // io.github.renaldi2108.arus.nav/Navigator.popWithResult|popWithResult(0:0){0§<kotlin.Any>}[0]
+    abstract fun pop(): kotlin/Boolean // io.github.renaldi2108.arus.nav/Navigator.pop|pop(){}[0]
+    abstract fun popTo(io.github.renaldi2108.arus.nav/Route, kotlin/Boolean = ...): kotlin/Boolean // io.github.renaldi2108.arus.nav/Navigator.popTo|popTo(io.github.renaldi2108.arus.nav.Route;kotlin.Boolean){}[0]
+    abstract fun popToRoot() // io.github.renaldi2108.arus.nav/Navigator.popToRoot|popToRoot(){}[0]
+    abstract fun publish(kotlin/Any) // io.github.renaldi2108.arus.nav/Navigator.publish|publish(kotlin.Any){}[0]
+    abstract fun push(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/Navigator.push|push(io.github.renaldi2108.arus.nav.Route){}[0]
+    abstract fun replace(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/Navigator.replace|replace(io.github.renaldi2108.arus.nav.Route){}[0]
+    abstract fun resetTo(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/Navigator.resetTo|resetTo(io.github.renaldi2108.arus.nav.Route){}[0]
+    abstract suspend fun <#A1: kotlin/Any> pushForResult(io.github.renaldi2108.arus.nav/ResultRoute<#A1>): io.github.renaldi2108.arus.nav/NavResult<#A1> // io.github.renaldi2108.arus.nav/Navigator.pushForResult|pushForResult(io.github.renaldi2108.arus.nav.ResultRoute<0:0>){0§<kotlin.Any>}[0]
+}
+
+abstract interface io.github.renaldi2108.arus.nav/Route : androidx.navigation3.runtime/NavKey // io.github.renaldi2108.arus.nav/Route|null[0]
+
+sealed interface <#A: out kotlin/Any> io.github.renaldi2108.arus.nav/NavResult { // io.github.renaldi2108.arus.nav/NavResult|null[0]
+    final class <#A1: out kotlin/Any> Completed : io.github.renaldi2108.arus.nav/NavResult<#A1> { // io.github.renaldi2108.arus.nav/NavResult.Completed|null[0]
+        constructor <init>(#A1) // io.github.renaldi2108.arus.nav/NavResult.Completed.<init>|<init>(1:0){}[0]
+
+        final val value // io.github.renaldi2108.arus.nav/NavResult.Completed.value|{}value[0]
+            final fun <get-value>(): #A1 // io.github.renaldi2108.arus.nav/NavResult.Completed.value.<get-value>|<get-value>(){}[0]
+
+        final fun component1(): #A1 // io.github.renaldi2108.arus.nav/NavResult.Completed.component1|component1(){}[0]
+        final fun copy(#A1 = ...): io.github.renaldi2108.arus.nav/NavResult.Completed<#A1> // io.github.renaldi2108.arus.nav/NavResult.Completed.copy|copy(1:0){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.nav/NavResult.Completed.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.nav/NavResult.Completed.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.nav/NavResult.Completed.toString|toString(){}[0]
+    }
+
+    final object Cancelled : io.github.renaldi2108.arus.nav/NavResult<kotlin/Nothing> { // io.github.renaldi2108.arus.nav/NavResult.Cancelled|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.nav/NavResult.Cancelled.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.nav/NavResult.Cancelled.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.nav/NavResult.Cancelled.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.renaldi2108.arus.core/NoEffect : io.github.renaldi2108.arus.core/UiEffect // io.github.renaldi2108.arus.core/NoEffect|null[0]
+
+sealed interface io.github.renaldi2108.arus.effects/ArusEffect : io.github.renaldi2108.arus.core/UiEffect { // io.github.renaldi2108.arus.effects/ArusEffect|null[0]
+    final class Dialog : io.github.renaldi2108.arus.effects/ArusEffect { // io.github.renaldi2108.arus.effects/ArusEffect.Dialog|null[0]
+        constructor <init>(kotlin/String, kotlin/String, kotlin/String = ..., kotlin/String? = ...) // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.<init>|<init>(kotlin.String;kotlin.String;kotlin.String;kotlin.String?){}[0]
+
+        final val confirmLabel // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.confirmLabel|{}confirmLabel[0]
+            final fun <get-confirmLabel>(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.confirmLabel.<get-confirmLabel>|<get-confirmLabel>(){}[0]
+        final val dismissLabel // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.dismissLabel|{}dismissLabel[0]
+            final fun <get-dismissLabel>(): kotlin/String? // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.dismissLabel.<get-dismissLabel>|<get-dismissLabel>(){}[0]
+        final val message // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.message|{}message[0]
+            final fun <get-message>(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.message.<get-message>|<get-message>(){}[0]
+        final val title // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.title|{}title[0]
+            final fun <get-title>(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.title.<get-title>|<get-title>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.component1|component1(){}[0]
+        final fun component2(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.component2|component2(){}[0]
+        final fun component3(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.component3|component3(){}[0]
+        final fun component4(): kotlin/String? // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.component4|component4(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String = ..., kotlin/String = ..., kotlin/String? = ...): io.github.renaldi2108.arus.effects/ArusEffect.Dialog // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.copy|copy(kotlin.String;kotlin.String;kotlin.String;kotlin.String?){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Dialog.toString|toString(){}[0]
+    }
+
+    final class Snackbar : io.github.renaldi2108.arus.effects/ArusEffect { // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar|null[0]
+        constructor <init>(kotlin/String, kotlin/String? = ..., io.github.renaldi2108.arus.effects/SnackbarDuration = ...) // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.<init>|<init>(kotlin.String;kotlin.String?;io.github.renaldi2108.arus.effects.SnackbarDuration){}[0]
+
+        final val actionLabel // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.actionLabel|{}actionLabel[0]
+            final fun <get-actionLabel>(): kotlin/String? // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.actionLabel.<get-actionLabel>|<get-actionLabel>(){}[0]
+        final val duration // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.duration|{}duration[0]
+            final fun <get-duration>(): io.github.renaldi2108.arus.effects/SnackbarDuration // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.duration.<get-duration>|<get-duration>(){}[0]
+        final val message // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.message|{}message[0]
+            final fun <get-message>(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.message.<get-message>|<get-message>(){}[0]
+
+        final fun component1(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.component1|component1(){}[0]
+        final fun component2(): kotlin/String? // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.component2|component2(){}[0]
+        final fun component3(): io.github.renaldi2108.arus.effects/SnackbarDuration // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.component3|component3(){}[0]
+        final fun copy(kotlin/String = ..., kotlin/String? = ..., io.github.renaldi2108.arus.effects/SnackbarDuration = ...): io.github.renaldi2108.arus.effects/ArusEffect.Snackbar // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.copy|copy(kotlin.String;kotlin.String?;io.github.renaldi2108.arus.effects.SnackbarDuration){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.effects/ArusEffect.Snackbar.toString|toString(){}[0]
+    }
+}
+
+sealed interface io.github.renaldi2108.arus.nav/GuardDecision { // io.github.renaldi2108.arus.nav/GuardDecision|null[0]
+    final class Redirect : io.github.renaldi2108.arus.nav/GuardDecision { // io.github.renaldi2108.arus.nav/GuardDecision.Redirect|null[0]
+        constructor <init>(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.<init>|<init>(io.github.renaldi2108.arus.nav.Route){}[0]
+
+        final val route // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.route|{}route[0]
+            final fun <get-route>(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.route.<get-route>|<get-route>(){}[0]
+
+        final fun component1(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.component1|component1(){}[0]
+        final fun copy(io.github.renaldi2108.arus.nav/Route = ...): io.github.renaldi2108.arus.nav/GuardDecision.Redirect // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.copy|copy(io.github.renaldi2108.arus.nav.Route){}[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.nav/GuardDecision.Redirect.toString|toString(){}[0]
+    }
+
+    final object Allow : io.github.renaldi2108.arus.nav/GuardDecision { // io.github.renaldi2108.arus.nav/GuardDecision.Allow|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.nav/GuardDecision.Allow.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.nav/GuardDecision.Allow.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.nav/GuardDecision.Allow.toString|toString(){}[0]
+    }
+
+    final object Block : io.github.renaldi2108.arus.nav/GuardDecision { // io.github.renaldi2108.arus.nav/GuardDecision.Block|null[0]
+        final fun equals(kotlin/Any?): kotlin/Boolean // io.github.renaldi2108.arus.nav/GuardDecision.Block.equals|equals(kotlin.Any?){}[0]
+        final fun hashCode(): kotlin/Int // io.github.renaldi2108.arus.nav/GuardDecision.Block.hashCode|hashCode(){}[0]
+        final fun toString(): kotlin/String // io.github.renaldi2108.arus.nav/GuardDecision.Block.toString|toString(){}[0]
+    }
+}
+
+abstract class <#A: kotlin/Any, #B: io.github.renaldi2108.arus.core/UiEffect> io.github.renaldi2108.arus.core/ArusController : androidx.lifecycle/ViewModel { // io.github.renaldi2108.arus.core/ArusController|null[0]
+    constructor <init>(#A, kotlin/Int = ..., androidx.lifecycle/SavedStateHandle? = ...) // io.github.renaldi2108.arus.core/ArusController.<init>|<init>(1:0;kotlin.Int;androidx.lifecycle.SavedStateHandle?){}[0]
+
+    final val effects // io.github.renaldi2108.arus.core/ArusController.effects|{}effects[0]
+        final fun <get-effects>(): kotlinx.coroutines.flow/Flow<#B> // io.github.renaldi2108.arus.core/ArusController.effects.<get-effects>|<get-effects>(){}[0]
+    final val state // io.github.renaldi2108.arus.core/ArusController.state|{}state[0]
+        final fun <get-state>(): kotlinx.coroutines.flow/StateFlow<#A> // io.github.renaldi2108.arus.core/ArusController.state.<get-state>|<get-state>(){}[0]
+
+    final fun <#A1: kotlin/Any> savedState(kotlin/String, #A1): kotlin.properties/ReadWriteProperty<kotlin/Any?, #A1> // io.github.renaldi2108.arus.core/ArusController.savedState|savedState(kotlin.String;0:0){0§<kotlin.Any>}[0]
+    final fun emit(#B) // io.github.renaldi2108.arus.core/ArusController.emit|emit(1:1){}[0]
+    final fun launch(kotlin.coroutines/SuspendFunction1<kotlinx.coroutines/CoroutineScope, kotlin/Unit>): kotlinx.coroutines/Job // io.github.renaldi2108.arus.core/ArusController.launch|launch(kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope,kotlin.Unit>){}[0]
+    final fun launchCatching(kotlin/Function1<kotlin/Throwable, kotlin/Unit> = ..., kotlin.coroutines/SuspendFunction1<kotlinx.coroutines/CoroutineScope, kotlin/Unit>): kotlinx.coroutines/Job // io.github.renaldi2108.arus.core/ArusController.launchCatching|launchCatching(kotlin.Function1<kotlin.Throwable,kotlin.Unit>;kotlin.coroutines.SuspendFunction1<kotlinx.coroutines.CoroutineScope,kotlin.Unit>){}[0]
+    final fun setState(kotlin/Function1<#A, #A>) // io.github.renaldi2108.arus.core/ArusController.setState|setState(kotlin.Function1<1:0,1:0>){}[0]
+    open fun onCleared() // io.github.renaldi2108.arus.core/ArusController.onCleared|onCleared(){}[0]
+    open fun onError(kotlin/Throwable) // io.github.renaldi2108.arus.core/ArusController.onError|onError(kotlin.Throwable){}[0]
+}
+
+final class <#A: kotlin/Any?> io.github.renaldi2108.arus.core/Ars : kotlin.properties/ReadWriteProperty<kotlin/Any?, #A> { // io.github.renaldi2108.arus.core/Ars|null[0]
+    constructor <init>(#A) // io.github.renaldi2108.arus.core/Ars.<init>|<init>(1:0){}[0]
+
+    final val asFlow // io.github.renaldi2108.arus.core/Ars.asFlow|{}asFlow[0]
+        final fun <get-asFlow>(): kotlinx.coroutines.flow/StateFlow<#A> // io.github.renaldi2108.arus.core/Ars.asFlow.<get-asFlow>|<get-asFlow>(){}[0]
+
+    final var value // io.github.renaldi2108.arus.core/Ars.value|{}value[0]
+        final fun <get-value>(): #A // io.github.renaldi2108.arus.core/Ars.value.<get-value>|<get-value>(){}[0]
+        final fun <set-value>(#A) // io.github.renaldi2108.arus.core/Ars.value.<set-value>|<set-value>(1:0){}[0]
+
+    final fun getValue(kotlin/Any?, kotlin.reflect/KProperty<*>): #A // io.github.renaldi2108.arus.core/Ars.getValue|getValue(kotlin.Any?;kotlin.reflect.KProperty<*>){}[0]
+    final fun setValue(kotlin/Any?, kotlin.reflect/KProperty<*>, #A) // io.github.renaldi2108.arus.core/Ars.setValue|setValue(kotlin.Any?;kotlin.reflect.KProperty<*>;1:0){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/ArusDeepLinks { // io.github.renaldi2108.arus.nav/ArusDeepLinks|null[0]
+    constructor <init>(kotlin.collections/List<io.github.renaldi2108.arus.nav/DeepLinkPattern>, kotlin.collections/Set<kotlin/String> = ...) // io.github.renaldi2108.arus.nav/ArusDeepLinks.<init>|<init>(kotlin.collections.List<io.github.renaldi2108.arus.nav.DeepLinkPattern>;kotlin.collections.Set<kotlin.String>){}[0]
+
+    final val hosts // io.github.renaldi2108.arus.nav/ArusDeepLinks.hosts|{}hosts[0]
+        final fun <get-hosts>(): kotlin.collections/Set<kotlin/String> // io.github.renaldi2108.arus.nav/ArusDeepLinks.hosts.<get-hosts>|<get-hosts>(){}[0]
+    final val patterns // io.github.renaldi2108.arus.nav/ArusDeepLinks.patterns|{}patterns[0]
+        final fun <get-patterns>(): kotlin.collections/List<io.github.renaldi2108.arus.nav/DeepLinkPattern> // io.github.renaldi2108.arus.nav/ArusDeepLinks.patterns.<get-patterns>|<get-patterns>(){}[0]
+
+    final fun resolve(kotlin/String): kotlin.collections/List<io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.nav/ArusDeepLinks.resolve|resolve(kotlin.String){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/ArusEntries { // io.github.renaldi2108.arus.nav/ArusEntries|null[0]
+    constructor <init>() // io.github.renaldi2108.arus.nav/ArusEntries.<init>|<init>(){}[0]
+
+    final val screens // io.github.renaldi2108.arus.nav/ArusEntries.screens|{}screens[0]
+        final fun <get-screens>(): kotlin.collections/MutableList<io.github.renaldi2108.arus.nav/RecordedScreen> // io.github.renaldi2108.arus.nav/ArusEntries.screens.<get-screens>|<get-screens>(){}[0]
+
+    final fun record(kotlin.reflect/KClass<out io.github.renaldi2108.arus.nav/Route>, kotlinx.serialization/KSerializer<*>, kotlin.collections/Map<kotlin/String, kotlin/Any>, kotlin/Boolean = ..., kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, io.github.renaldi2108.arus.nav/Route, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.record|record(kotlin.reflect.KClass<out|io.github.renaldi2108.arus.nav.Route>;kotlinx.serialization.KSerializer<*>;kotlin.collections.Map<kotlin.String,kotlin.Any>;kotlin.Boolean;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,io.github.renaldi2108.arus.nav.Route,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){}[0]
+    final inline fun <#A1: reified io.github.renaldi2108.arus.nav/Route> bottomSheetDialog(io.github.renaldi2108.arus.nav/BottomSheetProperties = ..., noinline kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, #A1, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.bottomSheetDialog|bottomSheetDialog(io.github.renaldi2108.arus.nav.BottomSheetProperties;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){0§<io.github.renaldi2108.arus.nav.Route>}[0]
+    final inline fun <#A1: reified io.github.renaldi2108.arus.nav/Route> dialog(androidx.compose.ui.window/DialogProperties = ..., noinline kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, #A1, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.dialog|dialog(androidx.compose.ui.window.DialogProperties;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){0§<io.github.renaldi2108.arus.nav.Route>}[0]
+    final inline fun <#A1: reified io.github.renaldi2108.arus.nav/Route> scene(kotlin.collections/Map<kotlin/String, kotlin/Any>, noinline kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, #A1, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.scene|scene(kotlin.collections.Map<kotlin.String,kotlin.Any>;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){0§<io.github.renaldi2108.arus.nav.Route>}[0]
+    final inline fun <#A1: reified io.github.renaldi2108.arus.nav/Route> screen(kotlin/Boolean, noinline kotlin/Function1<androidx.compose.animation/AnimatedContentTransitionScope<androidx.navigation3.scene/Scene<*>>, androidx.compose.animation/ContentTransform?>? = ..., noinline kotlin/Function1<androidx.compose.animation/AnimatedContentTransitionScope<androidx.navigation3.scene/Scene<*>>, androidx.compose.animation/ContentTransform?>? = ..., noinline kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, #A1, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.screen|screen(kotlin.Boolean;kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation3.scene.Scene<*>>,androidx.compose.animation.ContentTransform?>?;kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation3.scene.Scene<*>>,androidx.compose.animation.ContentTransform?>?;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){0§<io.github.renaldi2108.arus.nav.Route>}[0]
+    final inline fun <#A1: reified io.github.renaldi2108.arus.nav/Route> screen(kotlinx.serialization/KSerializer<#A1>, noinline kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, #A1, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.screen|screen(kotlinx.serialization.KSerializer<0:0>;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){0§<io.github.renaldi2108.arus.nav.Route>}[0]
+    final inline fun <#A1: reified io.github.renaldi2108.arus.nav/Route> screen(noinline kotlin/Function1<androidx.compose.animation/AnimatedContentTransitionScope<androidx.navigation3.scene/Scene<*>>, androidx.compose.animation/ContentTransform?>, noinline kotlin/Function1<androidx.compose.animation/AnimatedContentTransitionScope<androidx.navigation3.scene/Scene<*>>, androidx.compose.animation/ContentTransform?>? = ..., noinline kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, #A1, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.screen|screen(kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation3.scene.Scene<*>>,androidx.compose.animation.ContentTransform?>;kotlin.Function1<androidx.compose.animation.AnimatedContentTransitionScope<androidx.navigation3.scene.Scene<*>>,androidx.compose.animation.ContentTransform?>?;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){0§<io.github.renaldi2108.arus.nav.Route>}[0]
+    final inline fun <#A1: reified io.github.renaldi2108.arus.nav/Route> screen(noinline kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, #A1, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/ArusEntries.screen|screen(kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,0:0,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){0§<io.github.renaldi2108.arus.nav.Route>}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/ArusGraph { // io.github.renaldi2108.arus.nav/ArusGraph|null[0]
+    final val navigator // io.github.renaldi2108.arus.nav/ArusGraph.navigator|{}navigator[0]
+        final fun <get-navigator>(): io.github.renaldi2108.arus.nav/Navigator // io.github.renaldi2108.arus.nav/ArusGraph.navigator.<get-navigator>|<get-navigator>(){}[0]
+
+    final var inspector // io.github.renaldi2108.arus.nav/ArusGraph.inspector|{}inspector[0]
+        final fun <get-inspector>(): io.github.renaldi2108.arus.nav/NavInspector? // io.github.renaldi2108.arus.nav/ArusGraph.inspector.<get-inspector>|<get-inspector>(){}[0]
+        final fun <set-inspector>(io.github.renaldi2108.arus.nav/NavInspector?) // io.github.renaldi2108.arus.nav/ArusGraph.inspector.<set-inspector>|<set-inspector>(io.github.renaldi2108.arus.nav.NavInspector?){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/ArusNavigator : io.github.renaldi2108.arus.nav/Navigator { // io.github.renaldi2108.arus.nav/ArusNavigator|null[0]
+    constructor <init>(androidx.navigation3.runtime/NavBackStack<io.github.renaldi2108.arus.nav/Route>) // io.github.renaldi2108.arus.nav/ArusNavigator.<init>|<init>(androidx.navigation3.runtime.NavBackStack<io.github.renaldi2108.arus.nav.Route>){}[0]
+
+    final val canPop // io.github.renaldi2108.arus.nav/ArusNavigator.canPop|{}canPop[0]
+        final fun <get-canPop>(): kotlinx.coroutines.flow/StateFlow<kotlin/Boolean> // io.github.renaldi2108.arus.nav/ArusNavigator.canPop.<get-canPop>|<get-canPop>(){}[0]
+    final val currentRoute // io.github.renaldi2108.arus.nav/ArusNavigator.currentRoute|{}currentRoute[0]
+        final fun <get-currentRoute>(): kotlinx.coroutines.flow/StateFlow<io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.nav/ArusNavigator.currentRoute.<get-currentRoute>|<get-currentRoute>(){}[0]
+    final val entries // io.github.renaldi2108.arus.nav/ArusNavigator.entries|{}entries[0]
+        final fun <get-entries>(): kotlin.collections/List<io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.nav/ArusNavigator.entries.<get-entries>|<get-entries>(){}[0]
+
+    final var inspector // io.github.renaldi2108.arus.nav/ArusNavigator.inspector|{}inspector[0]
+        final fun <get-inspector>(): io.github.renaldi2108.arus.nav/NavInspector? // io.github.renaldi2108.arus.nav/ArusNavigator.inspector.<get-inspector>|<get-inspector>(){}[0]
+        final fun <set-inspector>(io.github.renaldi2108.arus.nav/NavInspector?) // io.github.renaldi2108.arus.nav/ArusNavigator.inspector.<set-inspector>|<set-inspector>(io.github.renaldi2108.arus.nav.NavInspector?){}[0]
+
+    final fun <#A1: kotlin/Any> messages(kotlin.reflect/KClass<#A1>): kotlinx.coroutines.flow/Flow<#A1> // io.github.renaldi2108.arus.nav/ArusNavigator.messages|messages(kotlin.reflect.KClass<0:0>){0§<kotlin.Any>}[0]
+    final fun <#A1: kotlin/Any> popWithResult(#A1) // io.github.renaldi2108.arus.nav/ArusNavigator.popWithResult|popWithResult(0:0){0§<kotlin.Any>}[0]
+    final fun pop(): kotlin/Boolean // io.github.renaldi2108.arus.nav/ArusNavigator.pop|pop(){}[0]
+    final fun popTo(io.github.renaldi2108.arus.nav/Route, kotlin/Boolean): kotlin/Boolean // io.github.renaldi2108.arus.nav/ArusNavigator.popTo|popTo(io.github.renaldi2108.arus.nav.Route;kotlin.Boolean){}[0]
+    final fun popToRoot() // io.github.renaldi2108.arus.nav/ArusNavigator.popToRoot|popToRoot(){}[0]
+    final fun publish(kotlin/Any) // io.github.renaldi2108.arus.nav/ArusNavigator.publish|publish(kotlin.Any){}[0]
+    final fun push(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/ArusNavigator.push|push(io.github.renaldi2108.arus.nav.Route){}[0]
+    final fun replace(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/ArusNavigator.replace|replace(io.github.renaldi2108.arus.nav.Route){}[0]
+    final fun resetTo(io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/ArusNavigator.resetTo|resetTo(io.github.renaldi2108.arus.nav.Route){}[0]
+    final suspend fun <#A1: kotlin/Any> pushForResult(io.github.renaldi2108.arus.nav/ResultRoute<#A1>): io.github.renaldi2108.arus.nav/NavResult<#A1> // io.github.renaldi2108.arus.nav/ArusNavigator.pushForResult|pushForResult(io.github.renaldi2108.arus.nav.ResultRoute<0:0>){0§<kotlin.Any>}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/ArusScreenScope { // io.github.renaldi2108.arus.nav/ArusScreenScope|null[0]
+    final val navigator // io.github.renaldi2108.arus.nav/ArusScreenScope.navigator|{}navigator[0]
+        final fun <get-navigator>(): io.github.renaldi2108.arus.nav/Navigator // io.github.renaldi2108.arus.nav/ArusScreenScope.navigator.<get-navigator>|<get-navigator>(){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/ArusTab { // io.github.renaldi2108.arus.nav/ArusTab|null[0]
+    constructor <init>(kotlin/String, io.github.renaldi2108.arus.nav/Route) // io.github.renaldi2108.arus.nav/ArusTab.<init>|<init>(kotlin.String;io.github.renaldi2108.arus.nav.Route){}[0]
+
+    final val id // io.github.renaldi2108.arus.nav/ArusTab.id|{}id[0]
+        final fun <get-id>(): kotlin/String // io.github.renaldi2108.arus.nav/ArusTab.id.<get-id>|<get-id>(){}[0]
+    final val start // io.github.renaldi2108.arus.nav/ArusTab.start|{}start[0]
+        final fun <get-start>(): io.github.renaldi2108.arus.nav/Route // io.github.renaldi2108.arus.nav/ArusTab.start.<get-start>|<get-start>(){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/ArusTabs { // io.github.renaldi2108.arus.nav/ArusTabs|null[0]
+    final val all // io.github.renaldi2108.arus.nav/ArusTabs.all|{}all[0]
+        final fun <get-all>(): kotlin.collections/List<io.github.renaldi2108.arus.nav/ArusTab> // io.github.renaldi2108.arus.nav/ArusTabs.all.<get-all>|<get-all>(){}[0]
+    final val navigator // io.github.renaldi2108.arus.nav/ArusTabs.navigator|{}navigator[0]
+        final fun <get-navigator>(): io.github.renaldi2108.arus.nav/Navigator // io.github.renaldi2108.arus.nav/ArusTabs.navigator.<get-navigator>|<get-navigator>(){}[0]
+    final val selectedTab // io.github.renaldi2108.arus.nav/ArusTabs.selectedTab|{}selectedTab[0]
+        final fun <get-selectedTab>(): kotlinx.coroutines.flow/StateFlow<kotlin/String> // io.github.renaldi2108.arus.nav/ArusTabs.selectedTab.<get-selectedTab>|<get-selectedTab>(){}[0]
+
+    final fun hidesTabBar(io.github.renaldi2108.arus.nav/Route): kotlin/Boolean // io.github.renaldi2108.arus.nav/ArusTabs.hidesTabBar|hidesTabBar(io.github.renaldi2108.arus.nav.Route){}[0]
+    final fun pop(): kotlin/Boolean // io.github.renaldi2108.arus.nav/ArusTabs.pop|pop(){}[0]
+    final fun select(kotlin/String) // io.github.renaldi2108.arus.nav/ArusTabs.select|select(kotlin.String){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/BottomSheetProperties { // io.github.renaldi2108.arus.nav/BottomSheetProperties|null[0]
+    constructor <init>(kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., kotlin/Boolean = ..., androidx.compose.ui.graphics/Shape? = ..., androidx.compose.ui.graphics/Color? = ..., androidx.compose.ui.graphics/Color? = ..., androidx.compose.ui.graphics/Color? = ..., androidx.compose.ui.unit/Dp? = ..., androidx.compose.ui.unit/Dp? = ..., kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, androidx.compose.foundation.layout/WindowInsets>? = ...) // io.github.renaldi2108.arus.nav/BottomSheetProperties.<init>|<init>(kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;kotlin.Boolean;androidx.compose.ui.graphics.Shape?;androidx.compose.ui.graphics.Color?;androidx.compose.ui.graphics.Color?;androidx.compose.ui.graphics.Color?;androidx.compose.ui.unit.Dp?;androidx.compose.ui.unit.Dp?;kotlin.Function2<androidx.compose.runtime.Composer,kotlin.Int,androidx.compose.foundation.layout.WindowInsets>?){}[0]
+
+    final val containerColor // io.github.renaldi2108.arus.nav/BottomSheetProperties.containerColor|{}containerColor[0]
+        final fun <get-containerColor>(): androidx.compose.ui.graphics/Color? // io.github.renaldi2108.arus.nav/BottomSheetProperties.containerColor.<get-containerColor>|<get-containerColor>(){}[0]
+    final val contentColor // io.github.renaldi2108.arus.nav/BottomSheetProperties.contentColor|{}contentColor[0]
+        final fun <get-contentColor>(): androidx.compose.ui.graphics/Color? // io.github.renaldi2108.arus.nav/BottomSheetProperties.contentColor.<get-contentColor>|<get-contentColor>(){}[0]
+    final val dismissOnBackPress // io.github.renaldi2108.arus.nav/BottomSheetProperties.dismissOnBackPress|{}dismissOnBackPress[0]
+        final fun <get-dismissOnBackPress>(): kotlin/Boolean // io.github.renaldi2108.arus.nav/BottomSheetProperties.dismissOnBackPress.<get-dismissOnBackPress>|<get-dismissOnBackPress>(){}[0]
+    final val dismissOnTapOutside // io.github.renaldi2108.arus.nav/BottomSheetProperties.dismissOnTapOutside|{}dismissOnTapOutside[0]
+        final fun <get-dismissOnTapOutside>(): kotlin/Boolean // io.github.renaldi2108.arus.nav/BottomSheetProperties.dismissOnTapOutside.<get-dismissOnTapOutside>|<get-dismissOnTapOutside>(){}[0]
+    final val gesturesEnabled // io.github.renaldi2108.arus.nav/BottomSheetProperties.gesturesEnabled|{}gesturesEnabled[0]
+        final fun <get-gesturesEnabled>(): kotlin/Boolean // io.github.renaldi2108.arus.nav/BottomSheetProperties.gesturesEnabled.<get-gesturesEnabled>|<get-gesturesEnabled>(){}[0]
+    final val maxWidth // io.github.renaldi2108.arus.nav/BottomSheetProperties.maxWidth|{}maxWidth[0]
+        final fun <get-maxWidth>(): androidx.compose.ui.unit/Dp? // io.github.renaldi2108.arus.nav/BottomSheetProperties.maxWidth.<get-maxWidth>|<get-maxWidth>(){}[0]
+    final val scrimColor // io.github.renaldi2108.arus.nav/BottomSheetProperties.scrimColor|{}scrimColor[0]
+        final fun <get-scrimColor>(): androidx.compose.ui.graphics/Color? // io.github.renaldi2108.arus.nav/BottomSheetProperties.scrimColor.<get-scrimColor>|<get-scrimColor>(){}[0]
+    final val shape // io.github.renaldi2108.arus.nav/BottomSheetProperties.shape|{}shape[0]
+        final fun <get-shape>(): androidx.compose.ui.graphics/Shape? // io.github.renaldi2108.arus.nav/BottomSheetProperties.shape.<get-shape>|<get-shape>(){}[0]
+    final val showDragHandle // io.github.renaldi2108.arus.nav/BottomSheetProperties.showDragHandle|{}showDragHandle[0]
+        final fun <get-showDragHandle>(): kotlin/Boolean // io.github.renaldi2108.arus.nav/BottomSheetProperties.showDragHandle.<get-showDragHandle>|<get-showDragHandle>(){}[0]
+    final val skipPartiallyExpanded // io.github.renaldi2108.arus.nav/BottomSheetProperties.skipPartiallyExpanded|{}skipPartiallyExpanded[0]
+        final fun <get-skipPartiallyExpanded>(): kotlin/Boolean // io.github.renaldi2108.arus.nav/BottomSheetProperties.skipPartiallyExpanded.<get-skipPartiallyExpanded>|<get-skipPartiallyExpanded>(){}[0]
+    final val tonalElevation // io.github.renaldi2108.arus.nav/BottomSheetProperties.tonalElevation|{}tonalElevation[0]
+        final fun <get-tonalElevation>(): androidx.compose.ui.unit/Dp? // io.github.renaldi2108.arus.nav/BottomSheetProperties.tonalElevation.<get-tonalElevation>|<get-tonalElevation>(){}[0]
+    final val windowInsets // io.github.renaldi2108.arus.nav/BottomSheetProperties.windowInsets|{}windowInsets[0]
+        final fun <get-windowInsets>(): kotlin/Function2<androidx.compose.runtime/Composer, kotlin/Int, androidx.compose.foundation.layout/WindowInsets>? // io.github.renaldi2108.arus.nav/BottomSheetProperties.windowInsets.<get-windowInsets>|<get-windowInsets>(){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/DeepLinkArgs { // io.github.renaldi2108.arus.nav/DeepLinkArgs|null[0]
+    final fun int(kotlin/String): kotlin/Int // io.github.renaldi2108.arus.nav/DeepLinkArgs.int|int(kotlin.String){}[0]
+    final fun string(kotlin/String): kotlin/String // io.github.renaldi2108.arus.nav/DeepLinkArgs.string|string(kotlin.String){}[0]
+    final fun stringOrNull(kotlin/String): kotlin/String? // io.github.renaldi2108.arus.nav/DeepLinkArgs.stringOrNull|stringOrNull(kotlin.String){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/DeepLinkBuilder { // io.github.renaldi2108.arus.nav/DeepLinkBuilder|null[0]
+    constructor <init>() // io.github.renaldi2108.arus.nav/DeepLinkBuilder.<init>|<init>(){}[0]
+
+    final val hosts // io.github.renaldi2108.arus.nav/DeepLinkBuilder.hosts|{}hosts[0]
+        final fun <get-hosts>(): kotlin.collections/MutableSet<kotlin/String> // io.github.renaldi2108.arus.nav/DeepLinkBuilder.hosts.<get-hosts>|<get-hosts>(){}[0]
+    final val patterns // io.github.renaldi2108.arus.nav/DeepLinkBuilder.patterns|{}patterns[0]
+        final fun <get-patterns>(): kotlin.collections/MutableList<io.github.renaldi2108.arus.nav/DeepLinkPattern> // io.github.renaldi2108.arus.nav/DeepLinkBuilder.patterns.<get-patterns>|<get-patterns>(){}[0]
+
+    final fun host(kotlin/String) // io.github.renaldi2108.arus.nav/DeepLinkBuilder.host|host(kotlin.String){}[0]
+    final fun path(kotlin/String, kotlin/Function1<io.github.renaldi2108.arus.nav/DeepLinkArgs, kotlin.collections/List<io.github.renaldi2108.arus.nav/Route>>) // io.github.renaldi2108.arus.nav/DeepLinkBuilder.path|path(kotlin.String;kotlin.Function1<io.github.renaldi2108.arus.nav.DeepLinkArgs,kotlin.collections.List<io.github.renaldi2108.arus.nav.Route>>){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/DeepLinkPattern { // io.github.renaldi2108.arus.nav/DeepLinkPattern|null[0]
+    constructor <init>(kotlin/String, kotlin/Function1<io.github.renaldi2108.arus.nav/DeepLinkArgs, kotlin.collections/List<io.github.renaldi2108.arus.nav/Route>>) // io.github.renaldi2108.arus.nav/DeepLinkPattern.<init>|<init>(kotlin.String;kotlin.Function1<io.github.renaldi2108.arus.nav.DeepLinkArgs,kotlin.collections.List<io.github.renaldi2108.arus.nav.Route>>){}[0]
+
+    final val build // io.github.renaldi2108.arus.nav/DeepLinkPattern.build|{}build[0]
+        final fun <get-build>(): kotlin/Function1<io.github.renaldi2108.arus.nav/DeepLinkArgs, kotlin.collections/List<io.github.renaldi2108.arus.nav/Route>> // io.github.renaldi2108.arus.nav/DeepLinkPattern.build.<get-build>|<get-build>(){}[0]
+
+    final fun match(io.github.renaldi2108.arus.nav/ParsedLink): io.github.renaldi2108.arus.nav/DeepLinkArgs? // io.github.renaldi2108.arus.nav/DeepLinkPattern.match|match(io.github.renaldi2108.arus.nav.ParsedLink){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/NavEvent { // io.github.renaldi2108.arus.nav/NavEvent|null[0]
+    constructor <init>(io.github.renaldi2108.arus.nav/NavAction, io.github.renaldi2108.arus.nav/Route?, kotlin.collections/List<io.github.renaldi2108.arus.nav/Route>) // io.github.renaldi2108.arus.nav/NavEvent.<init>|<init>(io.github.renaldi2108.arus.nav.NavAction;io.github.renaldi2108.arus.nav.Route?;kotlin.collections.List<io.github.renaldi2108.arus.nav.Route>){}[0]
+
+    final val action // io.github.renaldi2108.arus.nav/NavEvent.action|{}action[0]
+        final fun <get-action>(): io.github.renaldi2108.arus.nav/NavAction // io.github.renaldi2108.arus.nav/NavEvent.action.<get-action>|<get-action>(){}[0]
+    final val currentRoute // io.github.renaldi2108.arus.nav/NavEvent.currentRoute|{}currentRoute[0]
+        final fun <get-currentRoute>(): io.github.renaldi2108.arus.nav/Route? // io.github.renaldi2108.arus.nav/NavEvent.currentRoute.<get-currentRoute>|<get-currentRoute>(){}[0]
+    final val route // io.github.renaldi2108.arus.nav/NavEvent.route|{}route[0]
+        final fun <get-route>(): io.github.renaldi2108.arus.nav/Route? // io.github.renaldi2108.arus.nav/NavEvent.route.<get-route>|<get-route>(){}[0]
+    final val stack // io.github.renaldi2108.arus.nav/NavEvent.stack|{}stack[0]
+        final fun <get-stack>(): kotlin.collections/List<io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.nav/NavEvent.stack.<get-stack>|<get-stack>(){}[0]
+
+    final fun toString(): kotlin/String // io.github.renaldi2108.arus.nav/NavEvent.toString|toString(){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/NavInspector { // io.github.renaldi2108.arus.nav/NavInspector|null[0]
+    constructor <init>(kotlin/Int = ...) // io.github.renaldi2108.arus.nav/NavInspector.<init>|<init>(kotlin.Int){}[0]
+
+    final val capacity // io.github.renaldi2108.arus.nav/NavInspector.capacity|{}capacity[0]
+        final fun <get-capacity>(): kotlin/Int // io.github.renaldi2108.arus.nav/NavInspector.capacity.<get-capacity>|<get-capacity>(){}[0]
+    final val events // io.github.renaldi2108.arus.nav/NavInspector.events|{}events[0]
+        final fun <get-events>(): kotlin.collections/List<io.github.renaldi2108.arus.nav/NavEvent> // io.github.renaldi2108.arus.nav/NavInspector.events.<get-events>|<get-events>(){}[0]
+
+    final var onEvent // io.github.renaldi2108.arus.nav/NavInspector.onEvent|{}onEvent[0]
+        final fun <get-onEvent>(): kotlin/Function1<io.github.renaldi2108.arus.nav/NavEvent, kotlin/Unit>? // io.github.renaldi2108.arus.nav/NavInspector.onEvent.<get-onEvent>|<get-onEvent>(){}[0]
+        final fun <set-onEvent>(kotlin/Function1<io.github.renaldi2108.arus.nav/NavEvent, kotlin/Unit>?) // io.github.renaldi2108.arus.nav/NavInspector.onEvent.<set-onEvent>|<set-onEvent>(kotlin.Function1<io.github.renaldi2108.arus.nav.NavEvent,kotlin.Unit>?){}[0]
+
+    final fun clear() // io.github.renaldi2108.arus.nav/NavInspector.clear|clear(){}[0]
+}
+
+final class io.github.renaldi2108.arus.nav/RecordedScreen { // io.github.renaldi2108.arus.nav/RecordedScreen|null[0]
+    constructor <init>(kotlin.reflect/KClass<out io.github.renaldi2108.arus.nav/Route>, kotlinx.serialization/KSerializer<*>, kotlin.collections/Map<kotlin/String, kotlin/Any>, kotlin/Boolean, kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, io.github.renaldi2108.arus.nav/Route, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit>) // io.github.renaldi2108.arus.nav/RecordedScreen.<init>|<init>(kotlin.reflect.KClass<out|io.github.renaldi2108.arus.nav.Route>;kotlinx.serialization.KSerializer<*>;kotlin.collections.Map<kotlin.String,kotlin.Any>;kotlin.Boolean;kotlin.Function4<io.github.renaldi2108.arus.nav.ArusScreenScope,io.github.renaldi2108.arus.nav.Route,androidx.compose.runtime.Composer,kotlin.Int,kotlin.Unit>){}[0]
+
+    final val content // io.github.renaldi2108.arus.nav/RecordedScreen.content|{}content[0]
+        final fun <get-content>(): kotlin/Function4<io.github.renaldi2108.arus.nav/ArusScreenScope, io.github.renaldi2108.arus.nav/Route, androidx.compose.runtime/Composer, kotlin/Int, kotlin/Unit> // io.github.renaldi2108.arus.nav/RecordedScreen.content.<get-content>|<get-content>(){}[0]
+    final val hidesTabBar // io.github.renaldi2108.arus.nav/RecordedScreen.hidesTabBar|{}hidesTabBar[0]
+        final fun <get-hidesTabBar>(): kotlin/Boolean // io.github.renaldi2108.arus.nav/RecordedScreen.hidesTabBar.<get-hidesTabBar>|<get-hidesTabBar>(){}[0]
+    final val kClass // io.github.renaldi2108.arus.nav/RecordedScreen.kClass|{}kClass[0]
+        final fun <get-kClass>(): kotlin.reflect/KClass<out io.github.renaldi2108.arus.nav/Route> // io.github.renaldi2108.arus.nav/RecordedScreen.kClass.<get-kClass>|<get-kClass>(){}[0]
+    final val metadata // io.github.renaldi2108.arus.nav/RecordedScreen.metadata|{}metadata[0]
+        final fun <get-metadata>(): kotlin.collections/Map<kotlin/String, kotlin/Any> // io.github.renaldi2108.arus.nav/RecordedScreen.metadata.<get-metadata>|<get-metadata>(){}[0]
+    final val serializer // io.github.renaldi2108.arus.nav/RecordedScreen.serializer|{}serializer[0]
+        final fun <get-serializer>(): kotlinx.serialization/KSerializer<*> // io.github.renaldi2108.arus.nav/RecordedScreen.serializer.<get-serializer>|<get-serializer>(){}[0]
+}
+
+final object io.github.renaldi2108.arus.core/Arus { // io.github.renaldi2108.arus.core/Arus|null[0]
+    final var debugLogging // io.github.renaldi2108.arus.core/Arus.debugLogging|{}debugLogging[0]
+        final fun <get-debugLogging>(): kotlin/Boolean // io.github.renaldi2108.arus.core/Arus.debugLogging.<get-debugLogging>|<get-debugLogging>(){}[0]
+        final fun <set-debugLogging>(kotlin/Boolean) // io.github.renaldi2108.arus.core/Arus.debugLogging.<set-debugLogging>|<set-debugLogging>(kotlin.Boolean){}[0]
+}
+
+final const val io.github.renaldi2108.arus.core/DEFAULT_EFFECT_CAPACITY // io.github.renaldi2108.arus.core/DEFAULT_EFFECT_CAPACITY|{}DEFAULT_EFFECT_CAPACITY[0]
+    final fun <get-DEFAULT_EFFECT_CAPACITY>(): kotlin/Int // io.github.renaldi2108.arus.core/DEFAULT_EFFECT_CAPACITY.<get-DEFAULT_EFFECT_CAPACITY>|<get-DEFAULT_EFFECT_CAPACITY>(){}[0]
+
+final val io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Ars$stableprop // io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Ars$stableprop|#static{}io_github_renaldi2108_arus_core_Ars$stableprop[0]
+final val io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Arus$stableprop // io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Arus$stableprop|#static{}io_github_renaldi2108_arus_core_Arus$stableprop[0]
+final val io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_ArusController$stableprop // io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_ArusController$stableprop|#static{}io_github_renaldi2108_arus_core_ArusController$stableprop[0]
+final val io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Dialog$stableprop // io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Dialog$stableprop|#static{}io_github_renaldi2108_arus_effects_ArusEffect_Dialog$stableprop[0]
+final val io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Snackbar$stableprop // io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Snackbar$stableprop|#static{}io_github_renaldi2108_arus_effects_ArusEffect_Snackbar$stableprop[0]
+final val io.github.renaldi2108.arus.nav/LocalArusNavigator // io.github.renaldi2108.arus.nav/LocalArusNavigator|{}LocalArusNavigator[0]
+    final fun <get-LocalArusNavigator>(): androidx.compose.runtime/ProvidableCompositionLocal<io.github.renaldi2108.arus.nav/Navigator> // io.github.renaldi2108.arus.nav/LocalArusNavigator.<get-LocalArusNavigator>|<get-LocalArusNavigator>(){}[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusDeepLinks$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusDeepLinks$stableprop|#static{}io_github_renaldi2108_arus_nav_ArusDeepLinks$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusEntries$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusEntries$stableprop|#static{}io_github_renaldi2108_arus_nav_ArusEntries$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusGraph$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusGraph$stableprop|#static{}io_github_renaldi2108_arus_nav_ArusGraph$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusNavigator$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusNavigator$stableprop|#static{}io_github_renaldi2108_arus_nav_ArusNavigator$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusScreenScope$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusScreenScope$stableprop|#static{}io_github_renaldi2108_arus_nav_ArusScreenScope$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTab$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTab$stableprop|#static{}io_github_renaldi2108_arus_nav_ArusTab$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTabs$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTabs$stableprop|#static{}io_github_renaldi2108_arus_nav_ArusTabs$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_BottomSheetProperties$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_BottomSheetProperties$stableprop|#static{}io_github_renaldi2108_arus_nav_BottomSheetProperties$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkArgs$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkArgs$stableprop|#static{}io_github_renaldi2108_arus_nav_DeepLinkArgs$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkBuilder$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkBuilder$stableprop|#static{}io_github_renaldi2108_arus_nav_DeepLinkBuilder$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Allow$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Allow$stableprop|#static{}io_github_renaldi2108_arus_nav_GuardDecision_Allow$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Block$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Block$stableprop|#static{}io_github_renaldi2108_arus_nav_GuardDecision_Block$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Redirect$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Redirect$stableprop|#static{}io_github_renaldi2108_arus_nav_GuardDecision_Redirect$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavEvent$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavEvent$stableprop|#static{}io_github_renaldi2108_arus_nav_NavEvent$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavInspector$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavInspector$stableprop|#static{}io_github_renaldi2108_arus_nav_NavInspector$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Cancelled$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Cancelled$stableprop|#static{}io_github_renaldi2108_arus_nav_NavResult_Cancelled$stableprop[0]
+final val io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Completed$stableprop // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Completed$stableprop|#static{}io_github_renaldi2108_arus_nav_NavResult_Completed$stableprop[0]
+
+final fun (io.github.renaldi2108.arus.nav/ArusTabs).io.github.renaldi2108.arus.nav/tabBarVisible(androidx.compose.runtime/Composer?, kotlin/Int): kotlin/Boolean // io.github.renaldi2108.arus.nav/tabBarVisible|tabBarVisible@io.github.renaldi2108.arus.nav.ArusTabs(androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final fun (io.github.renaldi2108.arus.nav/Navigator).io.github.renaldi2108.arus.nav/guardedBy(kotlin/Array<out io.github.renaldi2108.arus.nav/NavGuard>...): io.github.renaldi2108.arus.nav/Navigator // io.github.renaldi2108.arus.nav/guardedBy|guardedBy@io.github.renaldi2108.arus.nav.Navigator(kotlin.Array<out|io.github.renaldi2108.arus.nav.NavGuard>...){}[0]
+final fun (io.github.renaldi2108.arus.nav/Navigator).io.github.renaldi2108.arus.nav/openStack(kotlin.collections/List<io.github.renaldi2108.arus.nav/Route>) // io.github.renaldi2108.arus.nav/openStack|openStack@io.github.renaldi2108.arus.nav.Navigator(kotlin.collections.List<io.github.renaldi2108.arus.nav.Route>){}[0]
+final fun <#A: io.github.renaldi2108.arus.core/UiEffect> io.github.renaldi2108.arus.effects/CollectEffects(io.github.renaldi2108.arus.core/ArusController<*, #A>, kotlin.coroutines/SuspendFunction1<#A, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int) // io.github.renaldi2108.arus.effects/CollectEffects|CollectEffects(io.github.renaldi2108.arus.core.ArusController<*,0:0>;kotlin.coroutines.SuspendFunction1<0:0,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int){0§<io.github.renaldi2108.arus.core.UiEffect>}[0]
+final fun <#A: kotlin/Any, #B: kotlin/Any?> (io.github.renaldi2108.arus.core/ArusController<#A, *>).io.github.renaldi2108.arus.core/select(kotlin/Function1<#A, #B>, androidx.compose.runtime/Composer?, kotlin/Int): androidx.compose.runtime/State<#B> // io.github.renaldi2108.arus.core/select|select@io.github.renaldi2108.arus.core.ArusController<0:0,*>(kotlin.Function1<0:0,0:1>;androidx.compose.runtime.Composer?;kotlin.Int){0§<kotlin.Any>;1§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any> (io.github.renaldi2108.arus.core/ArusController<#A, *>).io.github.renaldi2108.arus.core/collectState(androidx.compose.runtime/Composer?, kotlin/Int): androidx.compose.runtime/State<#A> // io.github.renaldi2108.arus.core/collectState|collectState@io.github.renaldi2108.arus.core.ArusController<0:0,*>(androidx.compose.runtime.Composer?;kotlin.Int){0§<kotlin.Any>}[0]
+final fun <#A: kotlin/Any> (io.github.renaldi2108.arus.nav/NavResult<#A>).io.github.renaldi2108.arus.nav/valueOrNull(): #A? // io.github.renaldi2108.arus.nav/valueOrNull|valueOrNull@io.github.renaldi2108.arus.nav.NavResult<0:0>(){0§<kotlin.Any>}[0]
+final fun <#A: kotlin/Any?, #B: kotlin/Any?> (kotlinx.coroutines.flow/StateFlow<#A>).io.github.renaldi2108.arus.core/derived(kotlinx.coroutines/CoroutineScope, kotlin/Function1<#A, #B>): kotlinx.coroutines.flow/StateFlow<#B> // io.github.renaldi2108.arus.core/derived|derived@kotlinx.coroutines.flow.StateFlow<0:0>(kotlinx.coroutines.CoroutineScope;kotlin.Function1<0:0,0:1>){0§<kotlin.Any?>;1§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any?> (#A).io.github.renaldi2108.arus.core/ars(): io.github.renaldi2108.arus.core/Ars<#A> // io.github.renaldi2108.arus.core/ars|ars@0:0(){0§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any?> (io.github.renaldi2108.arus.core/Ars<#A>).io.github.renaldi2108.arus.core/watch(androidx.compose.runtime/Composer?, kotlin/Int): androidx.compose.runtime/State<#A> // io.github.renaldi2108.arus.core/watch|watch@io.github.renaldi2108.arus.core.Ars<0:0>(androidx.compose.runtime.Composer?;kotlin.Int){0§<kotlin.Any?>}[0]
+final fun <#A: kotlin/Any?> io.github.renaldi2108.arus.core/ars(#A): io.github.renaldi2108.arus.core/Ars<#A> // io.github.renaldi2108.arus.core/ars|ars(0:0){0§<kotlin.Any?>}[0]
+final fun io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Ars$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Ars$stableprop_getter|io_github_renaldi2108_arus_core_Ars$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Arus$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_Arus$stableprop_getter|io_github_renaldi2108_arus_core_Arus$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_ArusController$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.core/io_github_renaldi2108_arus_core_ArusController$stableprop_getter|io_github_renaldi2108_arus_core_ArusController$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Dialog$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Dialog$stableprop_getter|io_github_renaldi2108_arus_effects_ArusEffect_Dialog$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Snackbar$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.effects/io_github_renaldi2108_arus_effects_ArusEffect_Snackbar$stableprop_getter|io_github_renaldi2108_arus_effects_ArusEffect_Snackbar$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/ArusDeepLinks(kotlin/Function1<io.github.renaldi2108.arus.nav/DeepLinkBuilder, kotlin/Unit>): io.github.renaldi2108.arus.nav/ArusDeepLinks // io.github.renaldi2108.arus.nav/ArusDeepLinks|ArusDeepLinks(kotlin.Function1<io.github.renaldi2108.arus.nav.DeepLinkBuilder,kotlin.Unit>){}[0]
+final fun io.github.renaldi2108.arus.nav/ArusHost(io.github.renaldi2108.arus.nav/ArusGraph, androidx.compose.ui/Modifier?, kotlin.collections/List<androidx.navigation3.scene/SceneStrategy<io.github.renaldi2108.arus.nav/Route>>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // io.github.renaldi2108.arus.nav/ArusHost|ArusHost(io.github.renaldi2108.arus.nav.ArusGraph;androidx.compose.ui.Modifier?;kotlin.collections.List<androidx.navigation3.scene.SceneStrategy<io.github.renaldi2108.arus.nav.Route>>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun io.github.renaldi2108.arus.nav/ArusHost(io.github.renaldi2108.arus.nav/Route, androidx.compose.ui/Modifier?, androidx.savedstate.serialization/SavedStateConfiguration?, kotlin.collections/List<androidx.navigation3.scene/SceneStrategy<io.github.renaldi2108.arus.nav/Route>>?, kotlin.collections/List<io.github.renaldi2108.arus.nav/NavGuard>?, kotlin/Function1<io.github.renaldi2108.arus.nav/ArusEntries, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // io.github.renaldi2108.arus.nav/ArusHost|ArusHost(io.github.renaldi2108.arus.nav.Route;androidx.compose.ui.Modifier?;androidx.savedstate.serialization.SavedStateConfiguration?;kotlin.collections.List<androidx.navigation3.scene.SceneStrategy<io.github.renaldi2108.arus.nav.Route>>?;kotlin.collections.List<io.github.renaldi2108.arus.nav.NavGuard>?;kotlin.Function1<io.github.renaldi2108.arus.nav.ArusEntries,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun io.github.renaldi2108.arus.nav/ArusTabHost(io.github.renaldi2108.arus.nav/ArusTabs, androidx.compose.ui/Modifier?, kotlin.collections/List<androidx.navigation3.scene/SceneStrategy<io.github.renaldi2108.arus.nav/Route>>?, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int) // io.github.renaldi2108.arus.nav/ArusTabHost|ArusTabHost(io.github.renaldi2108.arus.nav.ArusTabs;androidx.compose.ui.Modifier?;kotlin.collections.List<androidx.navigation3.scene.SceneStrategy<io.github.renaldi2108.arus.nav.Route>>?;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun io.github.renaldi2108.arus.nav/bottomSheetMetadata(io.github.renaldi2108.arus.nav/BottomSheetProperties): kotlin.collections/Map<kotlin/String, kotlin/Any> // io.github.renaldi2108.arus.nav/bottomSheetMetadata|bottomSheetMetadata(io.github.renaldi2108.arus.nav.BottomSheetProperties){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusDeepLinks$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusDeepLinks$stableprop_getter|io_github_renaldi2108_arus_nav_ArusDeepLinks$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusEntries$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusEntries$stableprop_getter|io_github_renaldi2108_arus_nav_ArusEntries$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusGraph$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusGraph$stableprop_getter|io_github_renaldi2108_arus_nav_ArusGraph$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusNavigator$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusNavigator$stableprop_getter|io_github_renaldi2108_arus_nav_ArusNavigator$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusScreenScope$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusScreenScope$stableprop_getter|io_github_renaldi2108_arus_nav_ArusScreenScope$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTab$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTab$stableprop_getter|io_github_renaldi2108_arus_nav_ArusTab$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTabs$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_ArusTabs$stableprop_getter|io_github_renaldi2108_arus_nav_ArusTabs$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_BottomSheetProperties$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_BottomSheetProperties$stableprop_getter|io_github_renaldi2108_arus_nav_BottomSheetProperties$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkArgs$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkArgs$stableprop_getter|io_github_renaldi2108_arus_nav_DeepLinkArgs$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkBuilder$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_DeepLinkBuilder$stableprop_getter|io_github_renaldi2108_arus_nav_DeepLinkBuilder$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Allow$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Allow$stableprop_getter|io_github_renaldi2108_arus_nav_GuardDecision_Allow$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Block$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Block$stableprop_getter|io_github_renaldi2108_arus_nav_GuardDecision_Block$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Redirect$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_GuardDecision_Redirect$stableprop_getter|io_github_renaldi2108_arus_nav_GuardDecision_Redirect$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavEvent$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavEvent$stableprop_getter|io_github_renaldi2108_arus_nav_NavEvent$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavInspector$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavInspector$stableprop_getter|io_github_renaldi2108_arus_nav_NavInspector$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Cancelled$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Cancelled$stableprop_getter|io_github_renaldi2108_arus_nav_NavResult_Cancelled$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Completed$stableprop_getter(): kotlin/Int // io.github.renaldi2108.arus.nav/io_github_renaldi2108_arus_nav_NavResult_Completed$stableprop_getter|io_github_renaldi2108_arus_nav_NavResult_Completed$stableprop_getter(){}[0]
+final fun io.github.renaldi2108.arus.nav/rememberArusGraph(io.github.renaldi2108.arus.nav/Route, androidx.savedstate.serialization/SavedStateConfiguration?, kotlin/String?, kotlin.collections/List<io.github.renaldi2108.arus.nav/NavGuard>?, kotlin/Function1<io.github.renaldi2108.arus.nav/ArusEntries, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int, kotlin/Int): io.github.renaldi2108.arus.nav/ArusGraph // io.github.renaldi2108.arus.nav/rememberArusGraph|rememberArusGraph(io.github.renaldi2108.arus.nav.Route;androidx.savedstate.serialization.SavedStateConfiguration?;kotlin.String?;kotlin.collections.List<io.github.renaldi2108.arus.nav.NavGuard>?;kotlin.Function1<io.github.renaldi2108.arus.nav.ArusEntries,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int;kotlin.Int){}[0]
+final fun io.github.renaldi2108.arus.nav/rememberArusTabs(kotlin/Array<out io.github.renaldi2108.arus.nav/ArusTab>..., kotlin/Function1<io.github.renaldi2108.arus.nav/ArusEntries, kotlin/Unit>, androidx.compose.runtime/Composer?, kotlin/Int): io.github.renaldi2108.arus.nav/ArusTabs // io.github.renaldi2108.arus.nav/rememberArusTabs|rememberArusTabs(kotlin.Array<out|io.github.renaldi2108.arus.nav.ArusTab>...;kotlin.Function1<io.github.renaldi2108.arus.nav.ArusEntries,kotlin.Unit>;androidx.compose.runtime.Composer?;kotlin.Int){}[0]
+final inline fun <#A: reified kotlin/Any> (io.github.renaldi2108.arus.nav/Navigator).io.github.renaldi2108.arus.nav/messages(): kotlinx.coroutines.flow/Flow<#A> // io.github.renaldi2108.arus.nav/messages|messages@io.github.renaldi2108.arus.nav.Navigator(){0§<kotlin.Any>}[0]
