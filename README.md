@@ -67,14 +67,14 @@ plugins {
 }
 ```
 
-That is all. `arus` exposes Navigation 3, Lifecycle, savedstate,
-kotlinx.serialization and Material 3 transitively, so everything the examples
-below call is already on your compile classpath.
+That is all. Everything the examples below call is already on your compile
+classpath, because `arus` exposes it transitively: the Compose runtime,
+coroutines, `ViewModel` with its savedstate and Compose integrations,
+Navigation 3 runtime and UI, `kotlinx-serialization-core`, and Material 3.
 
-> **Not published yet.** Those coordinates are the intended ones but do not
-> resolve today. Until they do, run `./gradlew :arus:assemble` and point at
-> `arus/build/outputs/aar/arus.aar`; `arus-sample-android` shows the shape,
-> including the transitive dependencies a bare `.aar` cannot declare for you.
+Two things it deliberately does not expose, in case your own code wants them:
+`kotlinx-coroutines-android` for the main dispatcher, and
+`kotlinx-serialization-json`. Declare those yourself if you use them directly.
 
 ### Requirements
 
@@ -87,7 +87,7 @@ below call is already on your compile classpath.
 | Lifecycle | 2.11.0 |
 | Compose Multiplatform | 1.12.2 (Material 3 on its own line, 1.9.0) |
 | Android Gradle Plugin | 9.3.1 |
-| Artifact size | 163 KB |
+| Artifact size | 164 KB |
 
 Targets built: Android, `iosArm64`, `iosSimulatorArm64`. **iOS compiles but has
 never been run** — treat it as unverified.
